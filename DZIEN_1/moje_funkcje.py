@@ -39,3 +39,29 @@ def multi(n):
     return lambda a:a*n
 
 print(multi(7)(3))
+
+#przykład
+
+num  = [67,8,-9,13,5,132,0,111,-66,19,1222,3,-12,0,2]
+parzlista = list(filter(lambda x:x%2==0,num))
+print(parzlista)
+
+
+cube = list(map(lambda x:x**3,num))
+print(cube)
+
+def mbl(n):
+    return 5*n+n/7
+
+values = list(map(mbl,num))
+
+print(values)
+
+kwadraty = [i**2 for i in num]
+print(kwadraty)
+
+def generuj_tablice(pot,min,max):
+    return [i**pot for i in range(min,max+1)]
+
+pt = generuj_tablice(5,101,1999)
+print(pt)
