@@ -26,4 +26,16 @@ def rank(*lang,nrrank,**kwargs):
 rank("Python","Java","C++","C#",nrrank=456)
 rank("Python","JavaScript","Java","C++","C#",nrrank=456,ver="1.2")
 
+#funkcje anonimowe
+print((lambda d:d+66)(4))
+print((lambda d:d+66)(8.5))
+print((lambda d,t:d+66-t)(-2,3.3))
 
+b = lambda a,b,c=3:(a+b)/c
+print(b(4,7,3))
+print(b(5.5,8))
+
+def multi(n):
+    return lambda a:a*n
+
+print(multi(7)(3))
