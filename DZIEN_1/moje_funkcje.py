@@ -65,3 +65,25 @@ def generuj_tablice(pot,min,max):
 
 pt = generuj_tablice(5,101,1999)
 print(pt)
+
+#funkcja wyższego rzędu
+
+def witaj(imie):
+    return f"Miło Cię widzieć: {imie}"
+
+def konkurs(imie,punkty,zaliczenie):
+    return f"Uczestnik konkursu: {imie}, liczba punktów: {punkty} -> Czy zaliczył: {zaliczenie}"
+
+def gx(x,y):
+    return x+2*y
+
+def info():
+    return "to funkcja bez argumentów"
+
+def osoba(funkcja,*args):
+    return funkcja(*args)
+
+print(osoba(witaj,"Leon"))
+print(osoba(konkurs,"Anna",65,"tak"))
+print(osoba(gx,3,5))
+print(osoba(info))
