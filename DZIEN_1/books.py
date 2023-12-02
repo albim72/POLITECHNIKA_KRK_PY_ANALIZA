@@ -48,6 +48,10 @@ class Encyklopedia(Book):
     def liczbatomow(self,n):
         print(f'liczba towmów encykopedii -> {n}')
 
+    def rabat(self, procent):
+        return super().rabat(procent*1.5)
+
+
 print("_"*50)
 e1 = Encyklopedia(67,"Encykopedia wiedzy technicznej","Janek Nowak","ABC",
                 "Encyklopedia Informatyki",156)
@@ -56,3 +60,4 @@ e1.cena = 188
 
 e1.print_book()
 e1.liczbatomow(6)
+print(f'rabat: {e1.rabat(10)}zł')
